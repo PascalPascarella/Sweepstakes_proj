@@ -6,5 +6,9 @@ namespace Sweepstakes
 {
 	class UI
 	{
+		public static string GetUserInputFor(string stringPrompt)
+		{
+
+		}
 	}
 }
