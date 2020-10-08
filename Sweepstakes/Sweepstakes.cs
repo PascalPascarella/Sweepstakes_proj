@@ -9,7 +9,7 @@ namespace Sweepstakes
 		// Member Variables
 		private Dictionary<int, Contestant> contestants;
 		private string name;
-		public string Name;
+		public string Name { get { return name; } }
 		public Contestant winnerContest;
 
 		// Constructor
@@ -23,15 +23,17 @@ namespace Sweepstakes
 		public void RegisterContestant(Contestant contestant)		// Assigns contestant object an int Key and adds to Dictionary
 		{
 			int regisNumber = contestants.Count + 1;
-
-			contestants.Add(regisNumber, contestant);
-
+			contestant.FirstName = UI.GetUserInputFor("Please enter your first name.");
+			contestant.LastName = UI.GetUserInputFor("Please enter your last name.");
+			contestant.EmailAddress = UI.GetUserInputFor("Please enter your email address.");
 			contestant.RegistrationNumber = regisNumber;
-
+			UI.PrintRegisNumber(regisNumber,Name);
+			contestants.Add(regisNumber, contestant);
+			PrintContestantInfo(contestant);
 		}
 		public Contestant PickWinner()
 		{
-			
+
 			int winnerKey = GetRandomNumber(contestants.Count + 1);
 			foreach (KeyValuePair<int, Contestant> winner in contestants)
 			{
@@ -44,7 +46,7 @@ namespace Sweepstakes
 		}
 	public void PrintContestantInfo(Contestant contestant)
 		{
-
+			UI.PrintContestantInfo(contestant);
 		}
 		public int GetRandomNumber(int max)
 		{
