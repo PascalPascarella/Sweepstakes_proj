@@ -10,7 +10,7 @@ namespace Sweepstakes
 		private ISweepstakesManager _manager;
 
 		// Constructor
-		public MarketingFirm(ISweepstakesManager manager)
+		public MarketingFirm(ISweepstakesManager manager)		// Injects stack or queue manager
 		{
 			_manager = manager;
 
@@ -18,7 +18,6 @@ namespace Sweepstakes
 		// Member Methods
 		public void CreateSweepstake(string name)		// Factory??
 		{
-			// -->TODO: UI
 			Sweepstakes sweepstakes = new Sweepstakes(name);		// Create new sweepstakes
 			_manager.InsertSweepstakes(sweepstakes);		// Add to stack/queue depending on manager type
 

@@ -15,7 +15,7 @@ namespace Sweepstakes
 		}
 
 		// Member Methods
-		public void CreateMarketingFirmWithManager(ISweepstakesManager manager)
+		public void CreateMarketingFirmWithManager(ISweepstakesManager manager)		// Injection of interface type manager allows for either stack or queue manager creation (method injection)
 		{
 			MarketingFirm marketingFirm1 = new MarketingFirm(manager);
 		}
