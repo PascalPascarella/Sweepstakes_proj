@@ -16,13 +16,13 @@ namespace Sweepstakes
 		}
 
 		// Member Methods
-		public void InsertSweepstakes(Sweepstakes sweepstakes)
+		public void InsertSweepstakes(Sweepstakes sweepstakes)		// Add new sweepstakes to end of queue
 		{
 			queue.Enqueue(sweepstakes);
 		}
-		//public Sweepstakes GetSweepstakes()
-		//{
-		//	return;
-		//}
+		public Sweepstakes GetSweepstakes()		// Remove oldest sweepstakes from front of queue
+		{
+			return queue.Dequeue();
+		}
 	}
 }
