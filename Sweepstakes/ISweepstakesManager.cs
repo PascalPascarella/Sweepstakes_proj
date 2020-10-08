@@ -10,9 +10,6 @@ namespace Sweepstakes
 		{
 
 		}
-		Sweepstakes GetSweepstakes()
-		{
-			return;
-		}
+		Sweepstakes GetSweepstakes();
 	}
 }
