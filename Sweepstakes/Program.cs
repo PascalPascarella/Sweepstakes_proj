@@ -6,7 +6,8 @@ namespace Sweepstakes
 	{
 		static void Main(string[] args)
 		{
-
+			Simulation sim1 = new Simulation();
+			sim1.RunMain();
 		}
 	}
 }
