@@ -19,7 +19,8 @@ namespace Sweepstakes
 		public void CreateSweepstake(string name)		// Factory??
 		{
 			// -->TODO: UI
-			Sweepstakes sweepstakes = new Sweepstakes(name);
+			Sweepstakes sweepstakes = new Sweepstakes(name);		// Create new sweepstakes
+			_manager.InsertSweepstakes(sweepstakes);		// Add to stack/queue depending on manager type
 
 		}
 	}
