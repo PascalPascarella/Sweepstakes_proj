@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sweepstakes
 {
-	class SweepstakesQueueManager
+	class SweepstakesQueueManager : ISweepstakesManager
 	{
 		// Member Variables
 		private Queue<Sweepstakes> queue;
@@ -12,17 +12,17 @@ namespace Sweepstakes
 		// Constructor
 		public SweepstakesQueueManager()
 		{
-
+			queue = new Queue<Sweepstakes>();
 		}
 
 		// Member Methods
 		public void InsertSweepstakes(Sweepstakes sweepstakes)
 		{
-
+			queue.Enqueue(sweepstakes);
 		}
-		public Sweepstakes GetSweepstakes()
-		{
-			return;
-		}
+		//public Sweepstakes GetSweepstakes()
+		//{
+		//	return;
+		//}
 	}
 }

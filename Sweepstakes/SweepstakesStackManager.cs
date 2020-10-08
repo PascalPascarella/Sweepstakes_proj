@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sweepstakes
 {
-	class SweepstakesStackManager
+	class SweepstakesStackManager	: ISweepstakesManager
 	{
 		// Member Variables
 		private Stack<Sweepstakes> stack;
@@ -12,17 +12,18 @@ namespace Sweepstakes
 		// Constructor
 		public SweepstakesStackManager()
 		{
-
+			stack = new Stack<Sweepstakes>();
 		}
 
 		// Member Methods
 		public void InsertSweepstakes(Sweepstakes sweepstakes)
 		{
+			stack.Push(sweepstakes);
 
 		}
-		public Sweepstakes GetSweepstakes()
-		{
-			return;
-		}
+		//public Sweepstakes GetSweepstakes()
+		//{
+		//	return;
+		//}
 	}
 }
