@@ -4,10 +4,12 @@ using System.Text;
 
 namespace Sweepstakes
 {
-	class UI
+	static class UI
 	{
 		public static string GetUserInputFor(string stringPrompt)
 		{
+			Console.WriteLine(stringPrompt);
+			return Console.ReadLine();
 
 		}
 	}
